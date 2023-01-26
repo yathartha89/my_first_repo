@@ -11,7 +11,7 @@ node{
   stage('COMPLILE'){
     steps {
        tool name: 'MAVEN', type: 'maven'
-       sh "mvn clean package"
+       sh "mvn package"
     
     }
   
