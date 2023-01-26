@@ -1,7 +1,7 @@
 node{
   stage('SCM_checkout'){
     steps {
-       git 'git 'https://github.com/yathartha89/time-tracker.git'
+       git 'https://github.com/yathartha89/time-tracker.git'
     
     
     }
