@@ -10,8 +10,8 @@ node{
   }
   stage('COMPLILE'){
     
-       tool name: 'MAVEN', type: 'maven'
-       sh "mvn package"
+       def mavenhome = tool name: 'MAVEN', type: 'maven'
+    sh "${mavenhome}/bin/mvn package"
     
     
   
