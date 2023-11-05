@@ -1,0 +1,1 @@
+nohup with & at the last >> The command is used to run the server in the background allowing you to perform other tasks as well simultaneousely . 
