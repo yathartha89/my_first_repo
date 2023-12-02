@@ -1,0 +1,30 @@
+version: '3'
+services:
+   backend:
+      image: yatharthavijay/my-apps:flask-app-1.0
+      ports:
+         - '5000:5000'
+      environment:
+         MYSQL_HOST: "mysql"
+         MYSQL_USER: "admin"
+         MYSQL_PASSWORD: "admin"
+         MYSQL_DB: "myDb"
+      depends_on:
+         - mysql
+   mysql:
+      ports:
+         - 3306:3306
+      image: mysql:5.7
+      environment:
+         MYSQL_USER: "admin"
+         MYSQL_PASSWORD: "admin"
+         MYSQL_ROOT_PASSWORD: "root"
+         MYSQL_DATABASE: "myDb"
+      volumes:
+         - ./message.sql:/docker-entrypoint-initdb.d/message.sql
+         - mysql-data:/var/lib/mysql
+
+volumes:
+   mysql-data:
+         
+         
