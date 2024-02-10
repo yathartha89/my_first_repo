@@ -1,1 +1,8 @@
 nohup with & at the last >> The command is used to run the server in the background allowing you to perform other tasks as well simultaneousely . 
+"""zip several files"""
+zip file_name.zip file_name
+"""Unzip a file"""
+unzip file_name.zip
+"""Zip and Unzip several files using tar"""
+tar -cvzf file.tar.gz file_name.txt
+tar -xvzf file.tar.gz
